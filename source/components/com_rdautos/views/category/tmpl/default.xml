@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="RDAUTOS STANDARD CATEGORY LAYOUT">
+		<message>
+			<![CDATA[WEBLINK RDAUTOS CATEGORY LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>RDAUTOS STANDARD CATEGORY LAYOUT</name>
+		<description>RDAUTOS STANDARD CATEGORY LAYOUT DESC</description>
+		<url>
+			<param name="id" type="category" section="com_rdautos" default="0" label="Category" description="PARAMCATSELECT" />
+		</url>
+	</state>
+</metadata>

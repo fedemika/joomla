@@ -1,0 +1,21 @@
+Dear %%FRIENDNAME%%,
+
+%%NAME%% has found this nice %%VEHICLE%% for you.
+You should take a look at this car, maybe you like it!
+
+Click on the link below to go directly to the car:
+%%LINK%%
+
+Comments:
+%%COMMENT%%
+
+Use our contactform if you have any questions!
+
+
+*DO NOT REPLY TO THIS E-MAIL*
+This is an automated e-mail message sent from our system. Do not reply to this e-mail as we won't receive your reply!
+
+Yours sincerely,
+
+%%SITE_TITLE%%
+%%SITE_URL%%
