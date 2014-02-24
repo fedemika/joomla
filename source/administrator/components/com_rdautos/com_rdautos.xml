@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>RDAutos</name>
+	<creationDate>29/09/2008</creationDate>
+	<author>Robert Dam</author>
+	<authorEmail>info@rd-media.org</authorEmail>
+	<authorUrl>www.rd-media.org</authorUrl>
+	<copyright>Robert Dam</copyright>
+	<license>GNU/GPL</license>
+	<!-- The version string is recorded in the components table -->
+	<version>1.5.5 Stable</version>
+	<!-- The description is optional and defaults to the name -->
+	<description></description>
+
+	<!-- Install Database Section -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.sql</file>
+		</sql>
+	</install>
+
+	<!-- Uninstall Database Section -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.sql</file>
+		</sql>
+	</uninstall>
+
+	<!-- Custom Install Script to execute -->
+	<installfile>install.rdautos.php</installfile>
+
+	<!-- Custom Uninstall Script to execute -->
+	<uninstallfile>uninstall.rdautos.php</uninstallfile>
+
+	<!-- Site Main File Copy Section-->
+	<files>
+		<filename>rdautos.php</filename>
+		<filename>controller.php</filename>
+		<filename>images/index.php</filename>
+		<filename>catimages/index.php</filename>
+		<filename>controllers/sendafriend.php</filename>
+		<filename>controllers/search.php</filename>
+		<filename>assets/closelabel.gif</filename>
+		<filename>assets/nextlabel.gif</filename>
+		<filename>assets/prevlabel.gif</filename>
+		<filename>assets/roebox.js</filename>
+		<filename>assets/roebox.css</filename>
+		<filename>assets/overlay.png</filename>
+		<filename>assets/loading.gif</filename>
+		<filename>assets/sendafriend.txt</filename>
+		<filename>models/categories.php</filename>
+		<filename>models/detail.php</filename>
+		<filename>models/category.php</filename>
+		<filename>models/crud.php</filename>
+		<filename>models/sendafriend.php</filename>
+		<filename>views/sendafriend/view.html.php</filename>
+		<filename>views/sendafriend/index.html</filename>
+		<filename>views/sendafriend/tmpl/index.html</filename>
+		<filename>views/sendafriend/tmpl/default.php</filename>
+		<filename>views/detail/view.html.php</filename>
+		<filename>views/detail/index.html</filename>
+		<filename>views/detail/tmpl/index.html</filename>
+		<filename>views/detail/tmpl/default.php</filename>	
+		<filename>views/category/view.html.php</filename>
+		<filename>views/category/index.html</filename>
+		<filename>views/category/tmpl/index.html</filename>
+		<filename>views/category/tmpl/default.php</filename>
+		<filename>views/categories/view.html.php</filename>
+		<filename>views/categories/index.html</filename>
+		<filename>views/categories/tmpl/index.html</filename>
+		<filename>views/categories/tmpl/default.php</filename>
+		<filename>views/search/view.html.php</filename>
+		<filename>views/search/index.html</filename>
+		<filename>views/search/tmpl/index.html</filename>
+		<filename>views/search/tmpl/default.php</filename>	
+		<filename>views/results/view.html.php</filename>
+		<filename>views/results/index.html</filename>
+		<filename>views/results/tmpl/index.html</filename>
+		<filename>views/results/tmpl/default.php</filename>				
+	</files>
+
+		<!-- Language -->
+	<languages>
+		<language tag="es-ES">language/es-ES/es-ES.com_rdautos.ini</language>
+	</languages>
+ 
+	<administration>
+	
+		<!-- Administration Menu Section -->
+		<menu>RD-Autos</menu>
+		<submenu>
+			<!-- Note that all & must be escaped to &amp; for the file to be valid XML and be parsed by the installer -->
+			<menu link="option=com_rdautos">Vehicle Management</menu>
+			<menu link="option=com_categories&section=com_rdautos">Category Management</menu>
+			<menu link="option=com_rdautos&amp;controller=makes&amp;task=makes">Makes/Models Management</menu>
+			<menu link="option=com_rdautos&amp;controller=configuration&amp;task=config">Site Configuration</menu>
+			<menu link="option=com_rdautos&amp;controller=stats&amp;task=stats">Stats</menu>
+		</submenu>
+
+		<files folder="admin">
+			
+			<filename>admin.rdautos.php</filename>
+			<filename>controller.php</filename>
+			<filename>controllers/application.php</filename>
+			<filename>controllers/category.php</filename>
+			<filename>controllers/makes.php</filename>
+			<filename>controllers/configuration.php</filename>
+			<filename>controllers/stats.php</filename>
+			<filename>models/application.php</filename>
+			<filename>models/category.php</filename>
+			<filename>models/makes.php</filename>
+			<filename>models/configuration.php</filename>
+			<filename>models/stats.php</filename>
+			<filename>helper/ajax.js</filename>
+			<filename>helper/helper.php</filename>
+			<filename>tables/application.php</filename>
+			<filename>tables/category.php</filename>
+			<filename>tables/makes.php</filename>
+			<filename>tables/models.php</filename>
+			<filename>tables/configuration.php</filename>
+			<filename>views/application/view.html.php</filename>
+			<filename>views/application/index.html</filename>
+			<filename>views/application/tmpl/default.php</filename>	
+			<filename>views/application/tmpl/form.php</filename>
+			<filename>views/application/tmpl/index.html</filename>	
+			<filename>views/category/view.html.php</filename>
+			<filename>views/category/index.html</filename>
+			<filename>views/category/tmpl/default.php</filename>
+			<filename>views/category/tmpl/form.php</filename>	
+			<filename>views/category/tmpl/index.html</filename>
+			<filename>views/configuration/view.html.php</filename>
+			<filename>views/configuration/index.html</filename>
+			<filename>views/configuration/tmpl/default.php</filename>	
+			<filename>views/configuration/tmpl/index.html</filename>		
+			<filename>views/stats/view.html.php</filename>
+			<filename>views/stats/index.html</filename>
+			<filename>views/stats/tmpl/default.php</filename>	
+			<filename>views/stats/tmpl/index.html</filename>		
+			<filename>views/makes/view.html.php</filename>
+			<filename>views/makes/index.html</filename>
+			<filename>views/makes/tmpl/default.php</filename>	
+			<filename>views/makes/tmpl/index.html</filename>
+			<filename>views/crud/view.html.php</filename>
+			<filename>views/crud/index.html</filename>
+			<filename>views/crud/tmpl/default.php</filename>	
+			<filename>views/crud/tmpl/index.html</filename>
+			<filename>install.sql</filename>
+			<filename>uninstall.sql</filename>
+		</files>		
+		
+		<!-- Language -->
+		<languages>
+			<language tag="es-ES">language/es-ES/es-ES.com_rdautos.ini</language>
+		</languages>
+		
+	</administration>
+</install>
