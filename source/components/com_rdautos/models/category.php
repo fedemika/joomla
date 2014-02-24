@@ -133,6 +133,7 @@ REPLACE */
 					AND a.modelid = d.modelid
 					AND a.catid = ".$this->id."
 					AND a.published = 1 
+					AND a.featured = 0
 					ORDER BY a.image1 DESC, a.".$this->order." ";
 // print_r($sql);
 // END PLUGIN HACK 
@@ -145,7 +146,7 @@ REPLACE */
 
    function getFeatured() {
    
-		if (empty($this->_data)) {
+		if (empty($this->_data) && $this->getState('limitstart')== 0) {
 		
 		 	$db = JFactory::getDBO();
 		
@@ -156,7 +157,7 @@ REPLACE */
 					AND a.catid = ".$this->id."
 					AND a.published = 1
 					AND a.featured = 1
-					ORDER BY RAND() LIMIT 2 ";
+					ORDER BY RAND()";
 		 
 		 	$db->setQuery($sql);
 		 	$this->data = $db->loadObjectList();
